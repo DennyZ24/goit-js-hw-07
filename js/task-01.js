@@ -8,8 +8,17 @@ console.log(`В списке ${categoriesListEl.getAttribute('id')} ${categories
 // console.log(categoriesListItemEl[0].querySelector('h2').textContent);
 // console.log(categoriesListItemEl[0].querySelectorAll('li').length);
 
-for (let i = 0; i < categoriesListItemEl.length; i+=1) {
-  console.log(`Категория: ${categoriesListItemEl[i].querySelector('h2').textContent}`);
+// for (let i = 0; i < categoriesListItemEl.length; i+=1) {
+//   console.log(`Категория: ${categoriesListItemEl[i].querySelector('h2').textContent}`);
 
-  console.log(`Количество элементов: ${categoriesListItemEl[i].querySelectorAll('li').length}`);
+//   console.log(`Количество элементов: ${categoriesListItemEl[i].querySelectorAll('li').length}`);
+// }
+
+const categoriesListItemArr = [...categoriesListItemEl];
+
+categoriesListItemArr.forEach(item => {
+  console.log(`Категория: ${item.querySelector('h2').textContent}`);
+
+  console.log(`Количество элементов: ${item.querySelectorAll('li').length}`);
 }
+);
